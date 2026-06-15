@@ -1,3 +1,4 @@
+import AdminDashboard from "./pages/AdminDashboard"
 import { Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from '@/context/ThemeContext'
 import { DocumentProvider } from '@/context/DocumentContext'
@@ -23,7 +24,8 @@ export default function App() {
             <Route path="/documents" element={<Documents />} />
             <Route path="/settings" element={<Settings />} />
           </Route>
-        </Routes>
+        <Route path="/admin" element={<AdminDashboard />} />
+          </Routes>
       </DocumentProvider>
     </ThemeProvider>
   )
